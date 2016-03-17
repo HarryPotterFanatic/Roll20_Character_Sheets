@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 /*-----------   Sheet   -----------*/\
+\
+h1 \{\
+    background: black;\
+    color: white;\
+    text-transform: uppercase;\
+    line-height: 1em;\
+    width: 840px;\
+\}\
+\
+/*----------- Tabs Setup -------------*/\
+\
+/*this hides the contents of each tab by default*/\
+.charsheet div[class^="sheet-section"] \{     \
+    display: none;\
+\}\
+\
+/*this shows the tab content when the appropriate input field is selected*/\
+.charsheet input.sheet-tab1:checked ~ div.sheet-section-basic,\
+.charsheet input.sheet-tab2:checked ~ div.sheet-section-background,\
+.charsheet input.sheet-tab3:checked ~ div.sheet-section-characteristics,\
+.charsheet input.sheet-tab4:checked ~ div.sheet-section-skills,\
+.charsheet input.sheet-tab5:checked ~ div.sheet-section-combat,\
+.charsheet input.sheet-tab6:checked ~ div.sheet-section-powers,\
+.charsheet input.sheet-tab7:checked ~ div.sheet-section-disadvantages \{\
+	display: block;\
+    width: 850px;\
+     \
+\}\
+\
+.charsheet input.sheet-tab99:checked ~ div[class^="sheet-section"] \{ 	\
+	display: block;\
+    width: 850px;\
+\}\
+\
+/*this hides the radio button for each tab, makes it 100px wide and 20px tall and makes sure it's above everything else*/\
+.charsheet input.sheet-tab \{\
+    width: 120px;\
+    height: 20px;\
+    cursor: pointer;	\
+	position: relative;\
+	opacity: 0;\
+	z-index: 9999;\
+\}\
+\
+/*this styles the span with the tab information and slides to the left, so it appears underneath the radio button*/\
+.charsheet span.sheet-tab \{\
+	text-align: center;\
+    display: inline-block;\
+	font-size: 13px;	\
+	background: #c7c3b0;\
+	color: black;\
+	font-weight: bold;\
+	border-radius: 4px;\
+	\
+	width: 120px;\
+    height: 20px;\
+    cursor: pointer;	\
+	position: relative;\
+	vertical-align: middle;\
+	margin-left: -101px;/*originally 91px*/\
+\}\
+\
+/*this modifies the span color once the radio button is selected so you know which tab is selected*/\
+.charsheet input.sheet-tab1:checked + span.sheet-tab1,\
+.charsheet input.sheet-tab2:checked + span.sheet-tab2,\
+.charsheet input.sheet-tab3:checked + span.sheet-tab3,\
+.charsheet input.sheet-tab4:checked + span.sheet-tab4,\
+.charsheet input.sheet-tab5:checked + span.sheet-tab5,\
+.charsheet input.sheet-tab6:checked + span.sheet-tab6,\
+.charsheet input.sheet-tab7:checked + span.sheet-tab7,\
+.charsheet input.sheet-tab8:checked + span.sheet-tab8,\
+.charsheet input.sheet-tab9:checked + span.sheet-tab9,\
+.charsheet input.sheet-tab99:checked + span.sheet-tab99 \{\
+    \
+    	background: #2c424e;\
+    	color: #bfc4c6;\
+	border-radius: 4px;\
+\}\
+/*----------- End Tab Setup -----------*/}
